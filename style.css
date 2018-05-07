@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.video-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.video-controls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+.video-controls img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 25%;
+    opacity: 0;
+    transition: opacity 1.5s;
+    pointer-events: initial;
+}
+.video-controls img.replay {
+    height: 6.25%;
+    left: 0;
+    right: 0;
+    transform: translate(100%, -50%);
+}
+.video-controls.active img{
+    opacity: 1;
+}
